@@ -24,7 +24,7 @@ function SearchBar({ items, setItemListFilteredItems }) {
     switch (event.code) {
       case 'Enter': {
         event.preventDefault()
-        handleFiltered([activeFilteredItem] ?? filteredItems)
+        handleFiltered(activeFilteredItem === null ? filteredItems : [activeFilteredItem])
         break
       }
       case 'ArrowDown': {

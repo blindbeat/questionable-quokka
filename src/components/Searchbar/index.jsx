@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import DropList from "./DropList";
 
-function SearchBar({ items, setItemListFilteredItems }) {
+function SearchBar({ items, itemListFilteredItems, setItemListFilteredItems }) {
   const [searchText, setSearchText] = useState('');
   const [filteredItems, setFilteredItems] = useState([])
   const [activeFilteredItem, setActiveFilteredItem] = useState(null)
@@ -78,7 +78,7 @@ function SearchBar({ items, setItemListFilteredItems }) {
             setActiveFilteredItem(null)
           }}
         />
-        <button className="w-1/6 p-4 border rounded-r-xl  hover:bg-slate-700 transition" onClick={resetFilteredItems}>
+        <button className="w-1/6 p-4 border rounded-r-xl  hover:bg-slate-700 transition hover:disabled:bg-slate-900 disabled:text-slate-400" disabled={itemListFilteredItems === null} onClick={resetFilteredItems}>
           Reset
         </button>
         {(searchText === '' || !searchBarActive) ?
@@ -87,7 +87,7 @@ function SearchBar({ items, setItemListFilteredItems }) {
             setActiveFilteredItem={setActiveFilteredItem}
             handleFiltered={handleFiltered}
             searchText={searchText}
-            items={filteredItems}
+            items={filteredItems.slice(0, 10)}
             activeFilteredItem={activeFilteredItem}
           />}
       </div>

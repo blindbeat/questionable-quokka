@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { getItems } from './api/itemApi';
-import './App.css';
 import ItemList from './components/ItemList';
 import SearchBar from './components/Searchbar';
 function App() {

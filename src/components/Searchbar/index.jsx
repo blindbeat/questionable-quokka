@@ -84,6 +84,7 @@ function SearchBar({ items, setItemListFilteredItems }) {
         {(searchText === '' || !searchBarActive) ?
           null :
           <DropList
+            setActiveFilteredItem={setActiveFilteredItem}
             handleFiltered={handleFiltered}
             searchText={searchText}
             items={filteredItems}

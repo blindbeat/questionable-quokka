@@ -1,7 +1,6 @@
 import Item from "./Item"
 
 const ItemList = ({ items }) => {
-
   if (items.length === 0) {
     return <p className="text-lg mt-4 text-center text-slate-400">Sorry, nothing found</p>
   }

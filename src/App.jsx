@@ -16,6 +16,7 @@ function App() {
       setItems(items);
       setLoadStatus('success');
     }
+
     fetchItems()
   }, [])
 

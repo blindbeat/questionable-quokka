@@ -1,7 +1,4 @@
-import React from 'react'
-
 function DropList({ searchText, items, activeFilteredItem, setActiveFilteredItem, handleFiltered }) {
-
   return (
     <div className='absolute w-full bg-slate-900'>
       <ul className='border rounded-b-xl rounded-t-md mt-2 overflow-hidden' onMouseMove={() => { setActiveFilteredItem(null) }}>
